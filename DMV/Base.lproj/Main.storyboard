@@ -32,19 +32,26 @@
                             <outlet property="delegate" destination="DfL-ni-j7W" id="Pf9-c7-WYL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="DMV Prep" id="AuL-qH-Smo"/>
+                    <navigationItem key="navigationItem" title="DMV Prep" id="AuL-qH-Smo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eVZ-Df-oNR">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addOptions:" destination="DfL-ni-j7W" id="gsy-xp-E9L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRN-Dl-pgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="138.98050974512745"/>
+            <point key="canvasLocation" x="724" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RQp-Ld-m40">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ij3-SG-ymY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Qei-Eb-EB7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qei-Eb-EB7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.25984656810760498" green="0.47285640239715576" blue="0.67548245191574097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">

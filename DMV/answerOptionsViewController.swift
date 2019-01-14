@@ -10,7 +10,8 @@ import UIKit
 
 class answerOptionsViewController: UITableViewController {
 
-    let answerOptionArray: Array = ["0.08", "0.04","0.02","0.01"]
+    var answerOptionArray: Array = ["0.08", "0.04","0.02","0.01"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,6 +38,23 @@ class answerOptionsViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
-
+    // Mark: add answer options clicked
+    @IBAction func addOptions(_ sender: UIBarButtonItem) {
+        var textFiled = UITextField()
+        let alert = UIAlertController(title: "Add Answer option", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add Option", style: .default) { (action) in
+            // What will happen once the user clicks the addItem button on our UI Alert
+            self.answerOptionArray.append(textFiled.text!)
+            print("Success")
+        }
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create New Answer option."
+            textFiled = alertTextField
+          //  print(alertTextField.text)
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
